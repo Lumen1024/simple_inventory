@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation
+package com.lumen1024.simpleinventory.presentation.core
 
 sealed interface Screen {
     @Serializable

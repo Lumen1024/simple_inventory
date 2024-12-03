@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation
+package com.lumen1024.simpleinventory.presentation.core
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -7,10 +7,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import com.lumen1024.simpleinventory.presentation.theme.SimpleInventoryTheme
 import dagger.hilt.android.AndroidEntryPoint
 
