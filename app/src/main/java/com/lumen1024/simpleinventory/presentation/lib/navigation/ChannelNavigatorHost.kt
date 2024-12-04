@@ -9,7 +9,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 
 @Composable
-fun NavigationEffects(
+fun ChannelNavigatorHost(
     navigationChannel: Channel<NavigationIntent>,
     navHostController: NavHostController
 ) {
