@@ -2,8 +2,7 @@ package com.lumen1024.simpleinventory.di
 
 import android.content.Context
 import androidx.room.Room
-import com.lumen1024.simpleinventory.domain.entity.AppDatabase
-import com.lumen1024.simpleinventory.domain.entity.InventoryItemDao
+import com.lumen1024.simpleinventory.domain.dao.InventoryItemDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

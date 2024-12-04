@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.domain.entity
+package com.lumen1024.simpleinventory.di
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
