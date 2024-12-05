@@ -12,6 +12,9 @@ interface InventoryItemDao {
     @Query("SELECT * FROM inventoryitem")
     fun getAll(): Flow<List<InventoryItem>>
 
+    @Query("SELECT * FROM inventoryitem WHERE name = :name")
+    fun getByName(name: String): Flow<List<InventoryItem>>
+
     @Query("SELECT * FROM inventoryitem WHERE id = :id")
     fun getById(id: String): Flow<InventoryItem?>
 
