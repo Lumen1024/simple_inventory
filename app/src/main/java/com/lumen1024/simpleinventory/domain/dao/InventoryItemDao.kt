@@ -1,6 +1,7 @@
 package com.lumen1024.simpleinventory.domain.dao
 
 import androidx.room.Dao
+import androidx.room.Insert
 import androidx.room.Query
 import com.lumen1024.simpleinventory.domain.entity.InventoryItem
 import kotlinx.coroutines.flow.Flow
@@ -9,4 +10,7 @@ import kotlinx.coroutines.flow.Flow
 interface InventoryItemDao {
     @Query("SELECT * FROM inventoryitem")
     fun getAll(): Flow<List<InventoryItem>>
+
+    @Insert
+    suspend fun addItem(vararg item: InventoryItem)
 }
