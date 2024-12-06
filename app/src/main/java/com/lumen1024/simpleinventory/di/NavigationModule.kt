@@ -1,7 +1,7 @@
 package com.lumen1024.simpleinventory.di
 
-import com.lumen1024.simpleinventory.presentation.lib.navigation.ChannelNavigator
-import com.lumen1024.simpleinventory.presentation.lib.navigation.Navigator
+import com.lumen1024.simpleinventory.presentation.lib.channel_navigator.ChannelNavigator
+import com.lumen1024.simpleinventory.presentation.lib.channel_navigator.Navigator
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
