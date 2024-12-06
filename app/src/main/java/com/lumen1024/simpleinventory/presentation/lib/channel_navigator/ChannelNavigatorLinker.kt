@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation.lib.navigation
+package com.lumen1024.simpleinventory.presentation.lib.channel_navigator
 
 import android.app.Activity
 import androidx.compose.runtime.Composable
@@ -9,7 +9,7 @@ import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.receiveAsFlow
 
 @Composable
-fun ChannelNavigatorHost(
+fun ChannelNavigatorLinker(
     navigationChannel: Channel<NavigationIntent>,
     navHostController: NavHostController
 ) {

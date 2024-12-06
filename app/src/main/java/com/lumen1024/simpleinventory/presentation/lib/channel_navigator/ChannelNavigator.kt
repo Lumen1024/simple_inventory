@@ -1,7 +1,7 @@
-package com.lumen1024.simpleinventory.presentation.lib.navigation
+package com.lumen1024.simpleinventory.presentation.lib.channel_navigator
 
 import androidx.navigation.NavOptionsBuilder
-import com.lumen1024.simpleinventory.presentation.core.Screen
+import com.lumen1024.simpleinventory.presentation.navigation.Screen
 import kotlinx.coroutines.channels.BufferOverflow
 import kotlinx.coroutines.channels.Channel
 

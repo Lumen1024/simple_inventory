@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation.core
+package com.lumen1024.simpleinventory.presentation.navigation
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
