@@ -35,17 +35,17 @@ fun AppBottomNavigationBar(
         NavigationBarItem(
             selected = (currentScreen == Screen.ItemsList),
             onClick = { viewModel.onNavigate(Screen.ItemsList) },
-            icon = { Icon(currentScreen.getIcon(), currentScreen.getTitle()) },
+            icon = { Icon(Screen.ItemsList.getIcon(), currentScreen.getTitle()) },
         )
         NavigationBarItem(
             selected = (currentScreen == Screen.ModifyItem),
             onClick = { viewModel.onNavigate(Screen.ModifyItem) },
-            icon = { Icon(currentScreen.getIcon(), currentScreen.getTitle()) },
+            icon = { Icon(Screen.ModifyItem.getIcon(), currentScreen.getTitle()) },
         )
         NavigationBarItem(
             selected = (currentScreen == Screen.Settings),
             onClick = { viewModel.onNavigate(Screen.Settings) },
-            icon = { Icon(currentScreen.getIcon(), currentScreen.getTitle()) },
+            icon = { Icon(Screen.Settings.getIcon(), currentScreen.getTitle()) },
         )
     }
 }

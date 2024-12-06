@@ -2,7 +2,6 @@ package com.lumen1024.simpleinventory.presentation.screen.items_list.model
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.lumen1024.simpleinventory.domain.entity.InventoryItem
 import com.lumen1024.simpleinventory.domain.usecase.AddItemUseCase
 import com.lumen1024.simpleinventory.domain.usecase.GetItemsUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -29,8 +28,13 @@ class ItemsListViewModel @Inject constructor(
     }
 
     fun onUiAction(action: ItemsListUiAction) {
-        viewModelScope.launch {
-            addItemUseCase(InventoryItem(name = "12ed", count = 102))
+        when (action) {
+            ItemsListUiAction.OnButtonClicked -> TODO()
+            is ItemsListUiAction.OnSearchQueryChanged -> _state.value =
+                _state.value.copy(searchQuery = action.query)
+
+            is ItemsListUiAction.OnCounterAction -> TODO()
+            is ItemsListUiAction.OnItemClicked -> TODO()
         }
     }
 }
