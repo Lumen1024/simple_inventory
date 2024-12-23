@@ -1,17 +1,20 @@
-package com.lumen1024.simpleinventory.presentation.screen.items_list.ui
+package com.lumen1024.simpleinventory.presentation.screen.items.ui
 
 import android.annotation.SuppressLint
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material3.ExperimentalMaterial3Api
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import com.lumen1024.simpleinventory.domain.entity.InventoryItem
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListUiAction
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListUiState
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListViewModel
+import com.lumen1024.simpleinventory.presentation.screen.items.model.CounterUiAction
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListUiAction
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListUiState
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListViewModel
 import com.lumen1024.simpleinventory.presentation.utils.UiStateful
 
 @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
@@ -23,7 +26,20 @@ fun ItemsListScreen(
 ) {
     LazyColumn {
         items(state.items, { it.id }) {
-            InventoryListItem(it)
+            InventoryListItem(
+                it,
+                onClick = { onAction(ItemsListUiAction.OnItemClicked(it)) },
+                onIncrementClick = {
+                    onAction(ItemsListUiAction.OnCounterAction(CounterUiAction.AddClicked))
+                },
+                onDecrementClick = {
+                    onAction(ItemsListUiAction.OnCounterAction(CounterUiAction.MinusClicked))
+                },
+                onDecrementLongClick = {
+                    onAction(ItemsListUiAction.OnCounterAction(CounterUiAction.MinusLongClicked))
+                },
+                modifier = Modifier.fillMaxWidth()
+            )
         }
     }
 }

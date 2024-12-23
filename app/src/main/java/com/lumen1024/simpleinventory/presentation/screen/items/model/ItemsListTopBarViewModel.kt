@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation.screen.items_list.model
+package com.lumen1024.simpleinventory.presentation.screen.items.model
 
 import androidx.lifecycle.ViewModel
 import dagger.hilt.android.lifecycle.HiltViewModel

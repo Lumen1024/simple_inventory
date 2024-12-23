@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation.screen.items_list.ui
+package com.lumen1024.simpleinventory.presentation.screen.items.ui
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background

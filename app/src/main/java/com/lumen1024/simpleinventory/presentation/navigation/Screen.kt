@@ -7,9 +7,10 @@ import androidx.compose.material.icons.filled.Settings
 import kotlinx.serialization.Serializable
 
 sealed interface Screen {
-
     @Serializable
-    object ItemsList : Screen
+    object Places : Screen
+    @Serializable
+    object Items : Screen
     @Serializable
     object ModifyItem : Screen
     @Serializable
@@ -17,13 +18,16 @@ sealed interface Screen {
 }
 
 fun Screen.getIcon() = when (this) {
-    Screen.ItemsList -> Icons.AutoMirrored.Filled.List
+    Screen.Items -> Icons.AutoMirrored.Filled.List
     Screen.ModifyItem -> Icons.Default.Add
     Screen.Settings -> Icons.Default.Settings
+    else -> throw IllegalArgumentException("Screen $this has no icon")
 }
 
 fun Screen.getTitle() = when (this) {
-    Screen.ItemsList -> "Items"
+    Screen.Items -> "Items"
     Screen.ModifyItem -> "Edit Item"
     Screen.Settings -> "Settings"
+    else -> throw IllegalArgumentException("Screen $this has no title")
+
 }

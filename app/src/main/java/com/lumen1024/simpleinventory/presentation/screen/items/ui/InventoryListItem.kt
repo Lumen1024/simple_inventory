@@ -1,8 +1,7 @@
-package com.lumen1024.simpleinventory.presentation.screen.items_list.ui
+package com.lumen1024.simpleinventory.presentation.screen.items.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row

@@ -23,7 +23,7 @@ fun NavHostController.getCurrentScreenAsState(): State<Screen?> {
 
 fun NavDestination.getScreen(): Screen? {
     val screens = mapOf(
-        Screen.ItemsList.javaClass.canonicalName to Screen.ItemsList,
+        Screen.Items.javaClass.canonicalName to Screen.Items,
         Screen.ModifyItem.javaClass.canonicalName to Screen.ModifyItem,
         Screen.Settings.javaClass.canonicalName to Screen.Settings,
     )

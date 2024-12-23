@@ -5,7 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.lumen1024.simpleinventory.presentation.screen.items_list.ui.ItemsListScreen
+import com.lumen1024.simpleinventory.presentation.screen.items.ui.ItemsListScreen
 
 @Composable
 fun MainNavGraph(
@@ -15,9 +15,9 @@ fun MainNavGraph(
     NavHost(
         modifier = modifier,
         navController = navHostController,
-        startDestination = Screen.ItemsList
+        startDestination = Screen.Items
     ) {
-        composable<Screen.ItemsList> { ItemsListScreen() }
+        composable<Screen.Items> { ItemsListScreen() }
         composable<Screen.ModifyItem> { }
         composable<Screen.Settings> { }
     }

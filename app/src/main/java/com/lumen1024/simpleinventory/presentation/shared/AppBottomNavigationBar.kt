@@ -20,7 +20,7 @@ class AppBottomNavigationBarViewModel @Inject constructor(
 ) : ViewModel() {
     fun onNavigate(screen: Screen) {
         navigator.navigate(screen) {
-            popUpTo(Screen.ItemsList)
+            popUpTo(Screen.Items)
         }
     }
 }
@@ -33,9 +33,9 @@ fun AppBottomNavigationBar(
 ) {
     NavigationBar(modifier = modifier) {
         NavigationBarItem(
-            selected = (currentScreen == Screen.ItemsList),
-            onClick = { viewModel.onNavigate(Screen.ItemsList) },
-            icon = { Icon(Screen.ItemsList.getIcon(), currentScreen.getTitle()) },
+            selected = (currentScreen == Screen.Items),
+            onClick = { viewModel.onNavigate(Screen.Items) },
+            icon = { Icon(Screen.Items.getIcon(), currentScreen.getTitle()) },
         )
         NavigationBarItem(
             selected = (currentScreen == Screen.ModifyItem),

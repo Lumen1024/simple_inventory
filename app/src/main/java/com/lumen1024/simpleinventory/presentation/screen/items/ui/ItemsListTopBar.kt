@@ -1,4 +1,4 @@
-package com.lumen1024.simpleinventory.presentation.screen.items_list.ui
+package com.lumen1024.simpleinventory.presentation.screen.items.ui
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -17,9 +17,9 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListTopBarAction
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListTopBarUIState
-import com.lumen1024.simpleinventory.presentation.screen.items_list.model.ItemsListTopBarViewModel
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListTopBarAction
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListTopBarUIState
+import com.lumen1024.simpleinventory.presentation.screen.items.model.ItemsListTopBarViewModel
 import com.lumen1024.simpleinventory.presentation.utils.UiStateful
 
 

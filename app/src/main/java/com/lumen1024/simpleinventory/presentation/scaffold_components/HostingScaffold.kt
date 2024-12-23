@@ -28,14 +28,14 @@ fun HostingScaffold() {
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 TopBarHost(
                     currentScreen = navHostController.getCurrentScreenAsState().value
-                        ?: Screen.ItemsList,
+                        ?: Screen.Items,
                 )
             }
         },
         bottomBar = {
             BottomBarHost(
                 currentScreen = navHostController.getCurrentScreenAsState().value
-                    ?: Screen.ItemsList
+                    ?: Screen.Items
             )
         }
     ) { innerPadding ->

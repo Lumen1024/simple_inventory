@@ -6,7 +6,16 @@ import java.util.UUID
 
 @Entity
 data class InventoryItem(
-    @PrimaryKey val id: String = UUID.randomUUID().toString(),
+    @PrimaryKey(autoGenerate = true)
+    val id: Long = 0,
     val name: String,
     val count: Int,
 )
+
+fun test() {
+    val a = InventoryItem(
+        id = TODO(),
+        name = TODO(),
+        count = TODO()
+    )
+}
