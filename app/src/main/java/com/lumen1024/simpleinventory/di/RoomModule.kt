@@ -2,7 +2,9 @@ package com.lumen1024.simpleinventory.di
 
 import android.content.Context
 import androidx.room.Room
-import com.lumen1024.simpleinventory.domain.dao.InventoryItemDao
+import com.lumen1024.simpleinventory.data.AppDatabase
+import com.lumen1024.simpleinventory.data.dao.ItemDao
+import com.lumen1024.simpleinventory.data.dao.PlaceDao
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -22,5 +24,10 @@ object RoomModule {
 
     @Provides
     @Singleton
-    fun provideDao(database: AppDatabase): InventoryItemDao = database.userDao()
+    fun provideItemDao(database: AppDatabase): ItemDao = database.ItemDao()
+
+    @Provides
+    @Singleton
+    fun providePlaceDao(database: AppDatabase): PlaceDao = database.PlaceDao()
+
 }

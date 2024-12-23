@@ -8,14 +8,7 @@ import java.util.UUID
 data class InventoryItem(
     @PrimaryKey(autoGenerate = true)
     val id: Long = 0,
+    val placeId: Long,
     val name: String,
     val count: Int,
 )
-
-fun test() {
-    val a = InventoryItem(
-        id = TODO(),
-        name = TODO(),
-        count = TODO()
-    )
-}
