@@ -17,7 +17,7 @@ interface ItemDao {
     fun getById(id: String): Flow<InventoryItem?>
 
     @Query("SELECT * FROM inventoryitem WHERE placeId = :placeId")
-    fun getItemsByPlace(placeId: InventoryPlace): Flow<List<InventoryItem>>
+    fun getItemsByPlace(placeId: Long): Flow<List<InventoryItem>>
 
     @Insert
     suspend fun addItem(vararg item: InventoryItem)

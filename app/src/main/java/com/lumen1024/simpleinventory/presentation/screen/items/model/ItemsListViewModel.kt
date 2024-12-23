@@ -3,7 +3,7 @@ package com.lumen1024.simpleinventory.presentation.screen.items.model
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.lumen1024.simpleinventory.domain.entity.InventoryItem
-import com.lumen1024.simpleinventory.domain.usecase.GetItemsUseCase
+import com.lumen1024.simpleinventory.domain.usecase.GetItemsByPlaceUseCase
 import com.lumen1024.simpleinventory.domain.usecase.RemoveItemUseCase
 import com.lumen1024.simpleinventory.domain.usecase.UpdateItemUseCase
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -14,7 +14,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class ItemsListViewModel @Inject constructor(
-    private val getItemsUseCase: GetItemsUseCase,
+    private val getItemsByPlaceUseCase: GetItemsByPlaceUseCase,
     private val updateItemUseCase: UpdateItemUseCase,
     private val removeItemUseCase: RemoveItemUseCase,
 ) : ViewModel() {
@@ -24,7 +24,7 @@ class ItemsListViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            getItemsUseCase().collect {
+            getItemsByPlaceUseCase().collect {
                 _state.value = _state.value.copy(items = it)
             }
         }

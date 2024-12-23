@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 interface ItemRepository {
     fun getItem(id: String): Flow<InventoryItem?>
     fun getItems(): Flow<List<InventoryItem>>
-    fun getItemsByPlace(place: InventoryPlace): Flow<List<InventoryItem>>
+    fun getItemsByPlace(placeId: Long): Flow<List<InventoryItem>>
 
     suspend fun addItem(item: InventoryItem)
     suspend fun removeItem(id: String)
