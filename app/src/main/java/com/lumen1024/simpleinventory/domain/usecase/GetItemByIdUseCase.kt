@@ -6,5 +6,5 @@ import javax.inject.Inject
 class GetItemByIdUseCase @Inject constructor(
     private val inventoryItemDao: ItemDao,
 ) {
-    operator fun invoke(id: String) = inventoryItemDao.getById(id)
+    operator fun invoke(id: Long) = inventoryItemDao.getById(id)
 }

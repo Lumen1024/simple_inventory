@@ -9,9 +9,7 @@ import javax.inject.Inject
 class LocalItemRepository @Inject constructor(
     private val itemDao: ItemDao
 ) : ItemRepository {
-    override fun getItem(id: String): Flow<InventoryItem?> = itemDao.getById(id)
-
-    override fun getItems(): Flow<List<InventoryItem>> = itemDao.getAll()
+    override fun getItem(id: Long): Flow<InventoryItem?> = itemDao.getById(id)
 
     override fun getItemsByPlace(placeid: Long): Flow<List<InventoryItem>> =
         itemDao.getItemsByPlace(placeid)
@@ -19,7 +17,7 @@ class LocalItemRepository @Inject constructor(
 
     override suspend fun addItem(item: InventoryItem) = itemDao.addItem(item)
 
-    override suspend fun removeItem(id: String) = itemDao.removeItem(id)
+    override suspend fun removeItem(id: Long) = itemDao.removeItem(id)
 
     override suspend fun updateItem(item: InventoryItem) = itemDao.updateItem(item)
 }

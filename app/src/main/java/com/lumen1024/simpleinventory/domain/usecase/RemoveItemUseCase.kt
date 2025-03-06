@@ -7,7 +7,7 @@ class RemoveItemUseCase @Inject constructor(
     private val itemRepository: ItemRepository
 ) {
 
-    suspend operator fun invoke(id: String) {
+    suspend operator fun invoke(id: Long) {
         itemRepository.removeItem(id)
     }
 }

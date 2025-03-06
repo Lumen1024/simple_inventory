@@ -7,14 +7,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class NavigationViewModel @Inject constructor(
-    private val navigator: Navigator
+    navigator: Navigator
 ) : ViewModel() {
 
     val navigationChannel = navigator.navigationChannel
-
-    fun onBottomBarNavigate(screen: Screen) {
-        navigator.navigate(screen) {
-            popUpTo(screen)
-        }
-    }
 }

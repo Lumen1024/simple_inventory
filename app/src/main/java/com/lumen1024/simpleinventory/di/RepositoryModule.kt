@@ -1,9 +1,9 @@
 package com.lumen1024.simpleinventory.di
 
 import com.lumen1024.simpleinventory.data.repository.LocalItemRepository
-import com.lumen1024.simpleinventory.data.repository.LocalPlaceRepository
+import com.lumen1024.simpleinventory.data.repository.LocalFolderRepository
 import com.lumen1024.simpleinventory.domain.repository.ItemRepository
-import com.lumen1024.simpleinventory.domain.repository.PlaceRepository
+import com.lumen1024.simpleinventory.domain.repository.FolderRepository
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -17,5 +17,5 @@ abstract class RepositoryModule {
     abstract fun bindItemRepository(impl: LocalItemRepository): ItemRepository
 
     @Binds
-    abstract fun bindPlaceRepository(impl: LocalPlaceRepository): PlaceRepository
+    abstract fun bindPlaceRepository(impl: LocalFolderRepository): FolderRepository
 }

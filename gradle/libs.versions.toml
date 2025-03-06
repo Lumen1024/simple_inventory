@@ -8,10 +8,10 @@ kspVersion = "2.0.21-1.0.27"
 room_version = "2.6.1"
 
 # presentation
-composeBom = "2024.11.00"
-activityCompose = "1.9.3"
-composeNavigation = "2.8.4"
-materialIcons = "1.7.5"
+composeBom = "2025.01.01"
+activityCompose = "1.10.0"
+composeNavigation = "2.8.6"
+materialIcons = "1.7.7"
 
 # testing
 junit = "4.13.2"

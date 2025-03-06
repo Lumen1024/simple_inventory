@@ -16,6 +16,8 @@ import com.lumen1024.simpleinventory.presentation.navigation.NavigationViewModel
 import com.lumen1024.simpleinventory.presentation.navigation.Screen
 import com.lumen1024.simpleinventory.presentation.utils.getCurrentScreenAsState
 
+private val defaultScreen = Screen.Folders
+
 @Composable
 fun HostingScaffold() {
     val viewModel: NavigationViewModel = hiltViewModel()
@@ -28,14 +30,14 @@ fun HostingScaffold() {
             Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
                 TopBarHost(
                     currentScreen = navHostController.getCurrentScreenAsState().value
-                        ?: Screen.Items,
+                        ?: defaultScreen
                 )
             }
         },
-        bottomBar = {
-            BottomBarHost(
+        floatingActionButton = {
+            FloatingButtonHost(
                 currentScreen = navHostController.getCurrentScreenAsState().value
-                    ?: Screen.Items
+                    ?: defaultScreen
             )
         }
     ) { innerPadding ->

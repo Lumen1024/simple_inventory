@@ -22,11 +22,8 @@ android {
         //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
-
+        versionName = "alpha_1"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
-
-
     }
 
     buildTypes {

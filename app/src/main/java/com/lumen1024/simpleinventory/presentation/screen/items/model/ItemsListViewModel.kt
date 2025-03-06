@@ -24,9 +24,9 @@ class ItemsListViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            getItemsByPlaceUseCase().collect {
-                _state.value = _state.value.copy(items = it)
-            }
+//            getItemsByPlaceUseCase().collect {
+//                _state.value = _state.value.copy(items = it)
+//            }
         }
     }
 
@@ -51,9 +51,9 @@ class ItemsListViewModel @Inject constructor(
                 }
             }
             CounterUiAction.MinusLongClicked -> {
-                viewModelScope.launch {
-                    removeItemUseCase(item.id)
-                }
+//                viewModelScope.launch {
+//                    removeItemUseCase(item.id)
+//                }
             }
         }
     }
